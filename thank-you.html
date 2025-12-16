@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תודה | אלון גרבר</title>
+
+    <!-- Google Fonts - Heebo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .thank-you {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .thank-you-content {
+            max-width: 500px;
+        }
+
+        .thank-you h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 24px;
+        }
+
+        .thank-you p {
+            font-size: 20px;
+            color: #6B7280;
+            margin-bottom: 16px;
+        }
+
+        .thank-you .emphasis {
+            color: #1A1A1A;
+            font-weight: 500;
+        }
+
+        .thank-you .cta-link {
+            display: inline-block;
+            margin-top: 32px;
+            font-size: 18px;
+        }
+
+        .calendar-section {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .calendar-section p {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+    </style>
+
+    <!-- Meta Pixel - Lead Conversion -->
+    <script>
+        // Track conversion if Meta Pixel is configured
+        // if (typeof fbq !== 'undefined') {
+        //     fbq('track', 'Lead');
+        // }
+    </script>
+</head>
+<body>
+    <section class="thank-you">
+        <div class="container">
+            <div class="thank-you-content">
+                <h1>קיבלתי.</h1>
+                <p>הפנייה שלך הגיעה.</p>
+                <p class="emphasis">אחזור אליך תוך 24 שעות.</p>
+
+                <div class="calendar-section">
+                    <p>רוצה לתאם עכשיו?</p>
+                    <!--
+                    Replace with your Calendly link:
+                    <a href="https://calendly.com/YOUR_LINK" class="cta-button" target="_blank" rel="noopener">
+                        לבחור שעה לשיחה
+                    </a>
+                    -->
+                    <a href="index.html" class="cta-link">חזרה לדף הראשי</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

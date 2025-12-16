@@ -1,0 +1,411 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+    direction: rtl;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #2563EB;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero .container {
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: clamp(18px, 3vw, 24px);
+    color: #6B7280;
+    margin-bottom: 48px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-family: 'Heebo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #1D4ED8;
+    text-decoration: none;
+}
+
+/* Problem Section */
+.problem {
+    padding: 100px 0;
+    background-color: #F9FAFB;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.problem-block {
+    padding: 32px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.problem-block p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 4px;
+}
+
+.problem-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Solution Section */
+.solution {
+    padding: 100px 0;
+}
+
+.solution-content {
+    max-width: 600px;
+}
+
+.solution-content p {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.solution-emphasis {
+    margin-top: 40px;
+    padding-right: 24px;
+    border-right: 3px solid #2563EB;
+}
+
+.solution-emphasis p {
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+/* Why Me Section */
+.why-me {
+    padding: 100px 0;
+    background-color: #F9FAFB;
+}
+
+.why-me-content {
+    max-width: 600px;
+}
+
+.why-me-content p {
+    font-size: 20px;
+}
+
+.why-me-content .emphasis {
+    font-weight: 500;
+}
+
+.why-me-content br {
+    display: block;
+    content: "";
+    margin-top: 24px;
+}
+
+/* Process Section */
+.process {
+    padding: 100px 0;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 600px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.step p {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 6px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 100px 0;
+    background-color: #F9FAFB;
+}
+
+.pricing-content {
+    max-width: 600px;
+}
+
+.pricing-content .price {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pricing-content p {
+    font-size: 20px;
+}
+
+.pricing-content .emphasis {
+    font-weight: 500;
+}
+
+.pricing-content br {
+    display: block;
+    content: "";
+    margin-top: 24px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+}
+
+.contact .container {
+    max-width: 500px;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'Heebo', sans-serif;
+    font-size: 18px;
+    padding: 14px 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    transition: border-color 0.2s ease;
+    direction: rtl;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563EB;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contact-form .cta-button {
+    margin-top: 16px;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.footer-name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.footer-contact {
+    font-size: 16px;
+    color: #9CA3AF;
+}
+
+.footer-contact a {
+    color: #9CA3AF;
+    transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-contact .separator {
+    margin: 0 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .problem,
+    .solution,
+    .why-me,
+    .process,
+    .pricing,
+    .contact {
+        padding: 60px 0;
+    }
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    .problem-grid {
+        gap: 24px;
+    }
+
+    .problem-block {
+        padding: 24px;
+    }
+
+    .solution-content p,
+    .why-me-content p,
+    .step p,
+    .pricing-content p {
+        font-size: 18px;
+    }
+
+    .pricing-content .price {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        padding: 14px 32px;
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0s; }
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
+    section:nth-child(7) { animation-delay: 0.6s; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
