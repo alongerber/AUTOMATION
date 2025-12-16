@@ -42,11 +42,23 @@ function initScrollAnimations() {
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    const animatedElements = [
+        '.problem-block',
+        '.flow-step',
+        '.timeline-step',
+        '.pricing-card',
+        '.contact-card',
+        '.highlight-box',
+        '.benefit'
+    ];
+
     if (prefersReducedMotion) {
         // Show all elements immediately if user prefers reduced motion
-        document.querySelectorAll('.problem-block, .solution-content, .why-me-content, .step, .pricing-content, #contact-form').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'none';
+        animatedElements.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
         });
         return;
     }
@@ -58,9 +70,8 @@ function initScrollAnimations() {
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Add staggered delay for elements in the same section
                 const delay = entry.target.dataset.delay || 0;
                 setTimeout(() => {
                     entry.target.classList.add('animate-in');
@@ -76,14 +87,32 @@ function initScrollAnimations() {
         observer.observe(el);
     });
 
-    // Observe steps with staggered delays
-    document.querySelectorAll('.step').forEach((el, index) => {
+    // Observe flow steps with staggered delays
+    document.querySelectorAll('.flow-step').forEach((el, index) => {
         el.dataset.delay = index * 150;
         observer.observe(el);
     });
 
-    // Observe other elements
-    document.querySelectorAll('.solution-content, .why-me-content, .pricing-content, #contact-form').forEach(el => {
+    // Observe timeline steps with staggered delays
+    document.querySelectorAll('.timeline-step').forEach((el, index) => {
+        el.dataset.delay = index * 200;
+        observer.observe(el);
+    });
+
+    // Observe highlight boxes with staggered delays
+    document.querySelectorAll('.highlight-box').forEach((el, index) => {
+        el.dataset.delay = index * 100;
+        observer.observe(el);
+    });
+
+    // Observe benefits with staggered delays
+    document.querySelectorAll('.benefit').forEach((el, index) => {
+        el.dataset.delay = index * 80;
+        observer.observe(el);
+    });
+
+    // Observe pricing card and contact card
+    document.querySelectorAll('.pricing-card, .contact-card').forEach(el => {
         observer.observe(el);
     });
 }
@@ -99,19 +128,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize scroll animations
     initScrollAnimations();
 
-    // Form submission handling
-    const form = document.getElementById('contact-form');
+    // Form submission handling for both forms
+    const forms = document.querySelectorAll('#contact-form, #hero-form');
 
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            // Track lead event
-            trackLead();
-
-            // Form will submit normally to thank-you.html
-            // If you want to use a different form handler (like Formspree),
-            // you can update the form action in index.html
-        });
-    }
+    forms.forEach(form => {
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                // Track lead event
+                trackLead();
+                // Form will submit normally to thank-you.html
+            });
+        }
+    });
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -126,6 +154,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Hide mobile CTA when near the contact section
+    const mobileCTA = document.querySelector('.mobile-cta');
+    const contactSection = document.getElementById('contact');
+
+    if (mobileCTA && contactSection) {
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    mobileCTA.style.opacity = '0';
+                    mobileCTA.style.pointerEvents = 'none';
+                } else {
+                    mobileCTA.style.opacity = '1';
+                    mobileCTA.style.pointerEvents = 'auto';
+                }
+            });
+        }, { threshold: 0.3 });
+
+        ctaObserver.observe(contactSection);
+    }
 });
 
 // =====================================================
