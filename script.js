@@ -35,12 +35,69 @@ function trackLead() {
 }
 
 // =====================================================
+// Scroll Animations (Intersection Observer)
+// =====================================================
+
+function initScrollAnimations() {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+        // Show all elements immediately if user prefers reduced motion
+        document.querySelectorAll('.problem-block, .solution-content, .why-me-content, .step, .pricing-content, #contact-form').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+        });
+        return;
+    }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add staggered delay for elements in the same section
+                const delay = entry.target.dataset.delay || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe problem blocks with staggered delays
+    document.querySelectorAll('.problem-block').forEach((el, index) => {
+        el.dataset.delay = index * 100;
+        observer.observe(el);
+    });
+
+    // Observe steps with staggered delays
+    document.querySelectorAll('.step').forEach((el, index) => {
+        el.dataset.delay = index * 150;
+        observer.observe(el);
+    });
+
+    // Observe other elements
+    document.querySelectorAll('.solution-content, .why-me-content, .pricing-content, #contact-form').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// =====================================================
 // Form Handling
 // =====================================================
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize Meta Pixel
     initMetaPixel();
+
+    // Initialize scroll animations
+    initScrollAnimations();
 
     // Form submission handling
     const form = document.getElementById('contact-form');
