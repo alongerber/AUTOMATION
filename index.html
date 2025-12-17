@@ -6,10 +6,10 @@
     <meta name="description" content="מערכות קליטת לקוחות לעורכי דין - קוד עצמאי, בלי מנויים, בלי תלות">
     <title>אלון גרבר | מערכות קליטת לקוחות לעורכי דין</title>
 
-    <!-- Google Fonts - Heebo + Playfair Display -->
+    <!-- Google Fonts - Heebo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -21,27 +21,21 @@
     </script>
 </head>
 <body>
-    <!-- Hero Section - Emotional Phone Mockup -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <!-- Phone Mockup with Painful Messages -->
             <div class="phone-wrapper">
                 <div class="phone-mockup">
-                    <!-- Phone Notch -->
                     <div class="phone-notch"></div>
-
-                    <!-- Phone Screen -->
                     <div class="phone-screen">
-                        <!-- Status Bar -->
                         <div class="phone-status-bar">
                             <span class="time">10:42</span>
                             <div class="status-icons">
-                                <span class="signal">●●●○</span>
                                 <span class="battery">78%</span>
                             </div>
                         </div>
 
-                        <!-- Messages Header -->
                         <div class="messages-header">
                             <span class="back-arrow">‹</span>
                             <div class="contact-info">
@@ -50,9 +44,7 @@
                             </div>
                         </div>
 
-                        <!-- Messages -->
                         <div class="messages-container">
-                            <!-- Message 1 -->
                             <div class="message incoming">
                                 <div class="message-bubble">
                                     <p class="message-text">היי, פניתי דרך האתר לפני שבוע בנוגע לתיק הירושה. עדיין לא קיבלתי תשובה?</p>
@@ -60,7 +52,6 @@
                                 </div>
                             </div>
 
-                            <!-- Message 2 -->
                             <div class="message incoming">
                                 <div class="message-bubble">
                                     <p class="message-text">שלום, ניסיתי להתקשר כמה פעמים. אני ממש צריך עזרה עם זה...</p>
@@ -68,7 +59,6 @@
                                 </div>
                             </div>
 
-                            <!-- Message 3 - The painful one -->
                             <div class="message incoming final">
                                 <div class="message-bubble">
                                     <p class="message-text">סגרתי עם עורך דין אחר. חבל, שמעתי עליך דברים טובים.</p>
@@ -76,185 +66,142 @@
                                 </div>
                             </div>
 
-                            <!-- Read indicator -->
                             <div class="read-indicator">
                                 <span>נקרא עכשיו</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Glow effect behind phone -->
                 <div class="phone-glow"></div>
             </div>
 
-            <!-- Headline Below Phone -->
+            <!-- Hero Text -->
             <div class="hero-text">
-                <h1>זה קרה גם השבוע.</h1>
-                <p class="subtitle">לא כי אתה לא טוב. כי לא חזרת בזמן.</p>
-                <a href="#contact" class="cta-button cta-gold">רוצה שזה יפסיק?</a>
+                <p class="hero-small">זה לא הטלפון שלך.</p>
+                <h1 class="hero-headline">אבל זה יכול להיות.</h1>
+                <a href="#contact" class="cta-button">רוצה שזה ייפסק?</a>
+
+                <div class="trust-badges">
+                    <span class="badge">מאובטח</span>
+                    <span class="badge">ללא התחייבות</span>
+                    <span class="badge">משתלב עם המייל שלך</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem">
+    <!-- Pain Section -->
+    <section class="pain-section" id="pain">
         <div class="container">
-            <h2>אתה מכיר את זה</h2>
-            <div class="problem-grid">
-                <div class="problem-block">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
-                        </svg>
-                    </div>
-                    <p class="problem-title">הודעה קולית מלפני שבוע.</p>
-                    <p>עדיין לא האזנת.</p>
-                    <p>עדיין לא חזרת.</p>
+            <h2 class="section-title">זה קרה גם השבוע.</h2>
+
+            <div class="pain-cards">
+                <div class="pain-card">
+                    <div class="pain-icon">📱</div>
+                    <h3>הודעה קולית מלפני שבוע</h3>
+                    <p>עדיין לא האזנת.<br>עדיין לא חזרת.</p>
                 </div>
-                <div class="problem-block">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/>
-                        </svg>
-                    </div>
-                    <p class="problem-title">פתק צהוב על השולחן.</p>
-                    <p>"להתקשר לרונית - דחוף"</p>
-                    <p>אתה לא זוכר מי זו רונית.</p>
+
+                <div class="pain-card">
+                    <div class="pain-icon">📝</div>
+                    <h3>פתק צהוב על השולחן</h3>
+                    <p>"להתקשר לרונית - דחוף"<br>אתה לא זוכר מי זו רונית.</p>
                 </div>
-                <div class="problem-block">
-                    <div class="problem-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                        </svg>
-                    </div>
-                    <p class="problem-title">3:47 בלילה.</p>
-                    <p>"רגע, מה עם התיק של אבירם?"</p>
-                    <p>לא נרדמת עד 5.</p>
+
+                <div class="pain-card">
+                    <div class="pain-icon">🌙</div>
+                    <h3>3:47 בלילה</h3>
+                    <p>"רגע, מה עם התיק של אבירם?"<br>לא נרדמת עד 5.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
-    <section class="solution">
+    <section class="solution-section">
         <div class="container">
-            <h2>מה אם זה היה עובד אחרת?</h2>
-            <div class="solution-flow">
-                <div class="flow-step">
-                    <div class="flow-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
-                        </svg>
-                    </div>
+            <h2 class="section-title-light">מה אם זה היה עובד אחרת?</h2>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-icon">📩</div>
                     <p>ליד נכנס מהאתר</p>
                 </div>
-                <div class="flow-arrow">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                    </svg>
+                <div class="process-arrow">←</div>
+                <div class="process-step">
+                    <div class="step-icon">⚡</div>
+                    <p>נפתח כרטיס אוטומטית</p>
                 </div>
-                <div class="flow-step">
-                    <div class="flow-icon lightning">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
-                        </svg>
-                    </div>
-                    <p>נקלט אוטומטית</p>
+                <div class="process-arrow">←</div>
+                <div class="process-step">
+                    <div class="step-icon">🔔</div>
+                    <p>אתה מקבל התראה</p>
                 </div>
-                <div class="flow-arrow">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                    </svg>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-icon success">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                    </div>
-                    <p>אתה והלקוח מקבלים התראה</p>
+                <div class="process-arrow">←</div>
+                <div class="process-step">
+                    <div class="step-icon">✅</div>
+                    <p>הלקוח מקבל אישור</p>
                 </div>
             </div>
-            <div class="solution-emphasis">
-                <p>בלי שתעשה כלום.</p>
-                <p>בלי שתצטרך לזכור.</p>
-                <p>בלי עוד מערכת ללמוד.</p>
-            </div>
+
+            <p class="solution-tagline">בלי שתעשה כלום. בלי שתצטרך לזכור.</p>
         </div>
     </section>
 
-    <!-- Why Me Section -->
-    <section class="why-me">
+    <!-- About Section -->
+    <section class="about-section">
         <div class="container">
-            <div class="why-me-grid">
-                <div class="why-me-content">
-                    <h2>למה אני?</h2>
-                    <p class="lead">כי אני לא סוכנות. אני בן אדם אחד שבונה דברים שעובדים.</p>
+            <div class="about-content">
+                <h2 class="section-title">למה אני?</h2>
 
-                    <div class="highlight-box">
-                        <span class="highlight-number">14</span>
-                        <span class="highlight-text">שנים בניתי מערכות לחברה שבה עבדתי</span>
-                    </div>
+                <div class="about-card">
+                    <p class="about-lead">כי אני לא סוכנות.</p>
+                    <p>אני בן אדם אחד שבונה דברים שעובדים.</p>
 
-                    <div class="highlight-box">
-                        <span class="highlight-number">200K</span>
-                        <span class="highlight-text">ש"ח חיסכון בשנה</span>
-                    </div>
-
-                    <p class="now">עכשיו אני בונה את זה למשרדי עורכי דין.</p>
-
-                    <div class="benefits">
-                        <div class="benefit">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            <span>בלי מנוי חודשי לנצח</span>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">14</span>
+                            <span class="stat-label">שנות ניסיון</span>
                         </div>
-                        <div class="benefit">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            <span>בלי תלות במערכת שתיסגר מחר</span>
-                        </div>
-                        <div class="benefit">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            <span>קוד פשוט שעובד. שלך.</span>
+                        <div class="stat">
+                            <span class="stat-number">200K</span>
+                            <span class="stat-label">₪ נחסכו בשנה</span>
                         </div>
                     </div>
+
+                    <p class="about-promise">בלי מנוי חודשי לנצח.<br>בלי תלות במערכת שתיסגר מחר.<br><strong>קוד פשוט שעובד. שלך.</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section class="process">
+    <section class="process-section">
         <div class="container">
-            <h2>איך זה עובד?</h2>
-            <div class="process-timeline">
-                <div class="timeline-step">
+            <h2 class="section-title">איך זה עובד?</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
                     <div class="timeline-number">1</div>
                     <div class="timeline-content">
-                        <h3>שיחה של 20 דקות</h3>
-                        <p>אני מבין מה קורה אצלך</p>
+                        <h3>שיחה קצרה</h3>
+                        <p>אני מבין מה קורה אצלך ומה צריך לפתור</p>
                     </div>
                 </div>
-                <div class="timeline-connector"></div>
-                <div class="timeline-step">
+
+                <div class="timeline-item">
                     <div class="timeline-number">2</div>
                     <div class="timeline-content">
                         <h3>אני בונה</h3>
-                        <p>בין שבוע לשבועיים</p>
+                        <p>בין שבוע לשבועיים - מערכת מותאמת לך</p>
                     </div>
                 </div>
-                <div class="timeline-connector"></div>
-                <div class="timeline-step">
+
+                <div class="timeline-item">
                     <div class="timeline-number">3</div>
                     <div class="timeline-content">
-                        <h3>מערכת שעובדת</h3>
-                        <p>ושקט בראש</p>
+                        <h3>שקט בראש</h3>
+                        <p>אתה מקבל מערכת שעובדת - והלקוחות מפסיקים להתפספס</p>
                     </div>
                 </div>
             </div>
@@ -262,85 +209,68 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing">
+    <section class="pricing-section">
         <div class="container">
-            <h2>כמה זה עולה?</h2>
+            <h2 class="section-title-light">כמה זה עולה?</h2>
+
             <div class="pricing-card">
-                <div class="pricing-badge">תשלום חד-פעמי</div>
-                <div class="pricing-amount">
-                    <span class="currency">₪</span>
+                <div class="price-main">
                     <span class="price-range">4,500 - 12,000</span>
+                    <span class="price-currency">₪</span>
                 </div>
-                <p class="pricing-note">תלוי במה שצריך</p>
-                <div class="pricing-features">
-                    <div class="feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>לא מנוי</span>
-                    </div>
-                    <div class="feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>לא הפתעות</span>
-                    </div>
-                    <div class="feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>הקוד שלך לנצח</span>
-                    </div>
+                <p class="price-note">תלוי במה שצריך</p>
+
+                <div class="price-benefits">
+                    <div class="benefit">✓ תשלום חד-פעמי</div>
+                    <div class="benefit">✓ בלי מנוי חודשי</div>
+                    <div class="benefit">✓ הקוד שלך לנצח</div>
                 </div>
-                <a href="#contact" class="cta-button cta-gold">רוצה לדעת מה מתאים לך?</a>
+
+                <a href="#contact" class="cta-button">בוא נדבר על מה מתאים לך</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact-section" id="contact">
         <div class="container">
-            <h2>בוא נדבר</h2>
-            <p class="contact-subtitle">5 דקות טלפון, בלי התחייבות</p>
-            <div class="contact-card">
-                <form id="contact-form" action="thank-you.html" method="GET">
-                    <div class="form-group">
-                        <label for="name">שם מלא</label>
-                        <input type="text" id="name" name="name" placeholder="השם שלך" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">טלפון</label>
-                        <input type="tel" id="phone" name="phone" placeholder="050-0000000" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="frustration">מה הדבר שהכי מתסכל אותך היום?</label>
-                        <textarea id="frustration" name="frustration" rows="3" placeholder="ספר לי בקצרה..."></textarea>
-                    </div>
-                    <button type="submit" class="cta-button cta-gold">רוצה לשמוע</button>
-                </form>
-            </div>
+            <h2 class="section-title">בוא נדבר</h2>
+            <p class="contact-subtitle">השאר פרטים ואחזור אליך תוך 24 שעות</p>
+
+            <form class="contact-form" id="contact-form" action="thank-you.html" method="GET">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="שם מלא" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="טלפון" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="frustration" placeholder="מה הדבר שהכי מתסכל אותך היום?" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-button">רוצה לשמוע</button>
+            </form>
+
+            <p class="contact-promise">🔒 הפרטים שלך לא יועברו לאף גורם חיצוני</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p class="footer-name">אלון גרבר</p>
-            <p class="footer-tagline">מערכות קליטת לקוחות לעורכי דין</p>
-            <p class="footer-contact">
-                <a href="tel:+972000000000">טלפון</a>
-                <span class="separator">|</span>
-                <a href="mailto:alon@example.com">מייל</a>
-            </p>
+            <div class="footer-content">
+                <p class="footer-name">אלון גרבר</p>
+                <p class="footer-tagline">מערכות קליטת לקוחות לעורכי דין</p>
+                <div class="footer-contact">
+                    <a href="tel:+972000000000">📞 טלפון</a>
+                    <a href="mailto:alon@example.com">📧 מייל</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Mobile CTA Button -->
-    <a href="tel:+972000000000" class="mobile-cta">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-        </svg>
-        <span>התקשר עכשיו</span>
+    <!-- Floating Call Button (Mobile) -->
+    <a href="tel:+972000000000" class="floating-call">
+        📞 להתקשר עכשיו
     </a>
 
     <script src="script.js"></script>
