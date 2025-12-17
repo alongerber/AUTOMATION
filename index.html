@@ -21,86 +21,78 @@
     </script>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- Hero Section - Emotional Phone Mockup -->
     <section class="hero">
-        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-grid">
-                <!-- Right Side - Content & Form -->
-                <div class="hero-content">
-                    <h1>כמה לקוחות הלכו למישהו אחר החודש?</h1>
-                    <p class="subtitle">לא כי אתה לא טוב. כי לא חזרת אליהם בזמן.</p>
+            <!-- Phone Mockup with Painful Messages -->
+            <div class="phone-wrapper">
+                <div class="phone-mockup">
+                    <!-- Phone Notch -->
+                    <div class="phone-notch"></div>
 
-                    <!-- Hero Form -->
-                    <form id="hero-form" class="hero-form" action="thank-you.html" method="GET">
-                        <div class="form-group">
-                            <input type="text" id="hero-name" name="name" placeholder="שם מלא" required>
+                    <!-- Phone Screen -->
+                    <div class="phone-screen">
+                        <!-- Status Bar -->
+                        <div class="phone-status-bar">
+                            <span class="time">10:42</span>
+                            <div class="status-icons">
+                                <span class="signal">●●●○</span>
+                                <span class="battery">78%</span>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="hero-phone" name="phone" placeholder="טלפון" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="hero-frustration" name="frustration" placeholder="מה הכי מתסכל אותך היום?">
-                        </div>
-                        <button type="submit" class="cta-button cta-gold">ראה איך זה עובד</button>
-                    </form>
 
-                    <!-- Trust Badges -->
-                    <div class="trust-badges">
-                        <div class="badge">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
-                            </svg>
-                            <span>אינטגרציה עם Outlook</span>
+                        <!-- Messages Header -->
+                        <div class="messages-header">
+                            <span class="back-arrow">‹</span>
+                            <div class="contact-info">
+                                <span class="contact-name">לקוחות פוטנציאליים</span>
+                                <span class="contact-status">3 הודעות שלא נקראו</span>
+                            </div>
                         </div>
-                        <div class="badge">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            <span>אינטגרציה עם Gmail</span>
-                        </div>
-                        <div class="badge">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-                            </svg>
-                            <span>מאובטח SSL</span>
+
+                        <!-- Messages -->
+                        <div class="messages-container">
+                            <!-- Message 1 -->
+                            <div class="message incoming">
+                                <div class="message-bubble">
+                                    <p class="message-text">היי, פניתי דרך האתר לפני שבוע בנוגע לתיק הירושה. עדיין לא קיבלתי תשובה?</p>
+                                    <span class="message-time">לפני 5 ימים</span>
+                                </div>
+                            </div>
+
+                            <!-- Message 2 -->
+                            <div class="message incoming">
+                                <div class="message-bubble">
+                                    <p class="message-text">שלום, ניסיתי להתקשר כמה פעמים. אני ממש צריך עזרה עם זה...</p>
+                                    <span class="message-time">לפני 3 ימים</span>
+                                </div>
+                            </div>
+
+                            <!-- Message 3 - The painful one -->
+                            <div class="message incoming final">
+                                <div class="message-bubble">
+                                    <p class="message-text">סגרתי עם עורך דין אחר. חבל, שמעתי עליך דברים טובים.</p>
+                                    <span class="message-time">היום, 09:15</span>
+                                </div>
+                            </div>
+
+                            <!-- Read indicator -->
+                            <div class="read-indicator">
+                                <span>נקרא עכשיו</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Left Side - Mockup -->
-                <div class="hero-mockup">
-                    <div class="mockup-card">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="success-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                                </svg>
-                            </div>
-                            <h3>3 לידים חדשים נקלטו היום</h3>
-                            <p>0 פניות שנפלו בין הכיסאות</p>
-                            <div class="mockup-stats">
-                                <div class="stat">
-                                    <span class="stat-time">10:30</span>
-                                    <span class="stat-text">יוסי כהן - פנייה חדשה</span>
-                                    <span class="stat-badge">נקלט</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-time">12:45</span>
-                                    <span class="stat-text">רונית לוי - תיאום פגישה</span>
-                                    <span class="stat-badge">נקלט</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Glow effect behind phone -->
+                <div class="phone-glow"></div>
+            </div>
+
+            <!-- Headline Below Phone -->
+            <div class="hero-text">
+                <h1>זה קרה גם השבוע.</h1>
+                <p class="subtitle">לא כי אתה לא טוב. כי לא חזרת בזמן.</p>
+                <a href="#contact" class="cta-button cta-gold">רוצה שזה יפסיק?</a>
             </div>
         </div>
     </section>
