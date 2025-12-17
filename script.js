@@ -1,8 +1,9 @@
 // =====================================================
-// Legal Automation Landing Page - JavaScript
+// Premium Legal Automation Landing Page
+// JavaScript - Animations & Interactions
 // =====================================================
 
-// Smooth Scroll for anchor links
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -16,82 +17,128 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Meta Pixel Tracking (placeholder)
-// Uncomment and add your Pixel ID when ready
-/*
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID');
-fbq('track', 'PageView');
-*/
-
-// Form submission tracking
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        // Track form submission with Meta Pixel (if enabled)
-        // fbq('track', 'Lead');
-
-        // You can also add custom form handling here
-        console.log('Form submitted');
-    });
-}
-
 // Intersection Observer for scroll animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -60px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const animateOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-            observer.unobserve(entry.target);
+            const delay = entry.target.dataset.delay || 0;
+            setTimeout(() => {
+                entry.target.classList.add('visible');
+            }, delay);
+            animateOnScroll.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
-document.querySelectorAll('.pain-card, .process-step, .timeline-item, .pricing-card, .about-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+// Apply animations to elements
+document.addEventListener('DOMContentLoaded', () => {
+    // Pain cards - staggered
+    document.querySelectorAll('.pain-card').forEach((el, i) => {
+        el.dataset.delay = i * 100;
+        el.classList.add('animate-on-scroll');
+        animateOnScroll.observe(el);
+    });
+
+    // Flow items - staggered
+    document.querySelectorAll('.flow-item').forEach((el, i) => {
+        el.dataset.delay = i * 120;
+        el.classList.add('animate-on-scroll');
+        animateOnScroll.observe(el);
+    });
+
+    // Feature cards - staggered
+    document.querySelectorAll('.feature-card').forEach((el, i) => {
+        el.dataset.delay = i * 100;
+        el.classList.add('animate-on-scroll');
+        animateOnScroll.observe(el);
+    });
+
+    // Timeline items - staggered
+    document.querySelectorAll('.timeline-item').forEach((el, i) => {
+        el.dataset.delay = i * 150;
+        el.classList.add('animate-on-scroll');
+        animateOnScroll.observe(el);
+    });
+
+    // Single elements
+    document.querySelectorAll('.pricing-card, .contact-form-wrapper, .about-content, .solution-highlight').forEach(el => {
+        el.classList.add('animate-on-scroll');
+        animateOnScroll.observe(el);
+    });
 });
 
-// Add animate-in styles
-const style = document.createElement('style');
-style.textContent = `
-    .animate-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
+// Inject animation styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(styleSheet);
 
-// Hide floating CTA when near contact section
-const floatingCta = document.querySelector('.floating-call');
+// Hide floating CTA near contact section
+const floatingCta = document.querySelector('.floating-cta');
 const contactSection = document.getElementById('contact');
 
 if (floatingCta && contactSection) {
-    window.addEventListener('scroll', () => {
-        const contactRect = contactSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+    let ticking = false;
 
-        // Hide button when contact section is visible
-        if (contactRect.top < windowHeight && contactRect.bottom > 0) {
-            floatingCta.style.opacity = '0';
-            floatingCta.style.pointerEvents = 'none';
-        } else {
-            floatingCta.style.opacity = '1';
-            floatingCta.style.pointerEvents = 'auto';
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const rect = contactSection.getBoundingClientRect();
+                const isNearContact = rect.top < window.innerHeight && rect.bottom > 0;
+
+                floatingCta.style.opacity = isNearContact ? '0' : '1';
+                floatingCta.style.pointerEvents = isNearContact ? 'none' : 'auto';
+                floatingCta.style.transform = isNearContact ? 'translateY(20px)' : 'translateY(0)';
+
+                ticking = false;
+            });
+            ticking = true;
         }
+    });
+}
+
+// Form handling
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        // Track submission (placeholder for analytics)
+        console.log('Form submitted');
+    });
+}
+
+// Parallax effect for phone mockup (subtle)
+const phoneWrapper = document.querySelector('.phone-wrapper');
+if (phoneWrapper && window.innerWidth > 768) {
+    let rafId;
+
+    window.addEventListener('scroll', () => {
+        if (rafId) return;
+
+        rafId = requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.15;
+
+            if (scrolled < window.innerHeight) {
+                phoneWrapper.style.transform = `translateY(${rate}px)`;
+            }
+
+            rafId = null;
+        });
     });
 }
