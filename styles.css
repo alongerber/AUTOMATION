@@ -821,7 +821,14 @@ h1, h2, h3, h4 {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+}
+
+.founder-role {
+    color: var(--accent-gold);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
 .founder-desc {
@@ -1302,25 +1309,25 @@ h1, h2, h3, h4 {
 }
 
 /* =====================================================
-   Floating CTA
+   Floating Call Button (Mobile)
    ===================================================== */
-.floating-cta {
+.floating-call {
     display: none;
     position: fixed;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
     color: var(--bg-primary);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     padding: 16px 24px;
-    border-radius: 14px;
+    border-radius: 12px;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 8px 32px rgba(212, 168, 83, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: all var(--transition-base);
 }
@@ -1500,7 +1507,7 @@ h1, h2, h3, h4 {
         padding-bottom: 100px;
     }
 
-    .floating-cta {
+    .floating-call {
         display: flex;
     }
 }
