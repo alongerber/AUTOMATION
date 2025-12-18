@@ -89,11 +89,11 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// Hide floating CTA near contact section
-const floatingCta = document.querySelector('.floating-cta');
+// Hide floating call button near contact section
+const floatingCall = document.querySelector('.floating-call');
 const contactSection = document.getElementById('contact');
 
-if (floatingCta && contactSection) {
+if (floatingCall && contactSection) {
     let ticking = false;
 
     window.addEventListener('scroll', () => {
@@ -102,9 +102,9 @@ if (floatingCta && contactSection) {
                 const rect = contactSection.getBoundingClientRect();
                 const isNearContact = rect.top < window.innerHeight && rect.bottom > 0;
 
-                floatingCta.style.opacity = isNearContact ? '0' : '1';
-                floatingCta.style.pointerEvents = isNearContact ? 'none' : 'auto';
-                floatingCta.style.transform = isNearContact ? 'translateY(20px)' : 'translateY(0)';
+                floatingCall.style.opacity = isNearContact ? '0' : '1';
+                floatingCall.style.pointerEvents = isNearContact ? 'none' : 'auto';
+                floatingCall.style.transform = isNearContact ? 'translateY(20px)' : 'translateY(0)';
 
                 ticking = false;
             });
@@ -113,14 +113,42 @@ if (floatingCta && contactSection) {
     });
 }
 
-// Form handling
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        // Track submission (placeholder for analytics)
-        console.log('Form submitted');
-    });
-}
+// Form handling with Formspree
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const button = form.querySelector('button');
+    button.textContent = 'שולח...';
+    button.disabled = true;
+
+    // Track Meta Pixel Lead event
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+    }
+
+    try {
+        const response = await fetch('https://formspree.io/f/xrezzvrw', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            window.location.href = 'thank-you.html';
+        } else {
+            alert('שגיאה בשליחה. נסה שוב.');
+            button.textContent = 'רוצה לשמוע';
+            button.disabled = false;
+        }
+    } catch (error) {
+        alert('שגיאה בשליחה. נסה שוב.');
+        button.textContent = 'רוצה לשמוע';
+        button.disabled = false;
+    }
+});
 
 // Parallax effect for phone mockup (subtle)
 const phoneWrapper = document.querySelector('.phone-wrapper');
