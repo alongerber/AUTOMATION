@@ -20,54 +20,114 @@
     </nav>
 
     <div class="hero-content">
-      <div class="hero-phone">
-        <!-- Phone Mockup -->
-        <div class="phone-frame">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span class="phone-time">10:42</span>
-              <span class="phone-status">
-                <span class="status-signal"></span>
-                <span class="status-battery">78%</span>
-              </span>
-            </div>
-            <div class="messages-container">
-              <div class="messages-title">
-                <span class="messages-label">לקוחות פוטנציאליים</span>
-                <span class="messages-badge">3 שלא נענו</span>
+      <div class="hero-text">
+        <h1 class="hero-headline">אף ליד<br>לא נופל.</h1>
+        <p class="hero-sub">כל הלידים שלך - מ-WhatsApp, טלפון, מייל ואתר - במקום אחד. סוף סוף.</p>
+        <a href="#waitlist" class="hero-cta">הצטרף לרשימת ההמתנה</a>
+      </div>
+
+      <div class="hero-phones">
+        <!-- Before Phone -->
+        <div class="phone-wrapper before">
+          <div class="phone-label">המצב היום</div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="chaos-screen">
+              <div class="chaos-header">
+                <span class="chaos-time">10:42</span>
+                <span class="chaos-battery">23%</span>
               </div>
-              <div class="message-card">
-                <div class="message-header">
-                  <span class="message-sender">לקוח חדש</span>
-                  <span class="message-time">לפני 5 ימים</span>
+              <div class="chaos-apps">
+                <div class="app-icon whatsapp">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  <span class="app-badge">47</span>
                 </div>
-                <p class="message-text">היי, פניתי דרך האתר בנוגע לתיק ירושה. עדיין לא קיבלתי תשובה?</p>
+                <div class="app-icon email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span class="app-badge">23</span>
+                </div>
+                <div class="app-icon phone-app">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span class="app-badge danger">3</span>
+                </div>
               </div>
-              <div class="message-card">
-                <div class="message-header">
-                  <span class="message-sender">לקוח חדש</span>
-                  <span class="message-time">לפני 3 ימים</span>
-                </div>
-                <p class="message-text">שלום, ניסיתי להתקשר כמה פעמים. אני ממש צריך עזרה עם זה...</p>
+              <div class="sticky-notes">
+                <div class="sticky yellow">להתקשר לדוד!</div>
+                <div class="sticky pink">ליד מהאתר??</div>
+                <div class="sticky blue">מייל ירושה</div>
               </div>
-              <div class="message-card final">
-                <div class="message-header">
-                  <span class="message-sender">לקוח חדש</span>
-                  <span class="message-time">היום, 09:15</span>
-                </div>
-                <p class="message-text">סגרתי עם עורך דין אחר. חבל, שמעתי עליך דברים טובים.</p>
+              <div class="chaos-status">
+                <span class="status-dot danger"></span>
+                בלאגן
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="hero-text">
-        <p class="hero-eyebrow">זה לא הטלפון שלך.</p>
-        <h1 class="hero-headline">אבל זה יכול להיות.</h1>
-        <p class="hero-sub">לידים נכנסים מ-WhatsApp, טלפון, מייל, ואתר.<br>אין סיכוי לזכור את כולם. עד עכשיו.</p>
-        <a href="#waitlist" class="hero-cta">גלה איך זה עובד</a>
+        <!-- After Phone -->
+        <div class="phone-wrapper after">
+          <div class="phone-label">עם NoMiss</div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="app-screen">
+              <div class="app-header">
+                <span class="app-logo">NoMiss</span>
+                <span class="app-date">היום</span>
+              </div>
+              <div class="stats-card">
+                <div class="stat">
+                  <span class="stat-number">12</span>
+                  <span class="stat-label">לידים החודש</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number success">9</span>
+                  <span class="stat-label">טופלו</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number warning">3</span>
+                  <span class="stat-label">פתוחים</span>
+                </div>
+              </div>
+              <div class="leads-list">
+                <div class="lead-item">
+                  <div class="lead-avatar">ד</div>
+                  <div class="lead-info">
+                    <span class="lead-name">דוד כהן</span>
+                    <span class="lead-source">WhatsApp · תיק ירושה</span>
+                  </div>
+                  <span class="lead-status handled">טופל</span>
+                </div>
+                <div class="lead-item">
+                  <div class="lead-avatar">ש</div>
+                  <div class="lead-info">
+                    <span class="lead-name">שרה לוי</span>
+                    <span class="lead-source">טופס · נזקי גוף</span>
+                  </div>
+                  <span class="lead-status open">פתוח</span>
+                </div>
+                <div class="lead-item">
+                  <div class="lead-avatar">מ</div>
+                  <div class="lead-info">
+                    <span class="lead-name">משה ישראלי</span>
+                    <span class="lead-source">טלפון · ייעוץ</span>
+                  </div>
+                  <span class="lead-status handled">טופל</span>
+                </div>
+              </div>
+              <div class="app-status">
+                <span class="status-dot success"></span>
+                הכל תחת שליטה
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -76,119 +136,122 @@
     </div>
   </section>
 
-  <!-- Problem Section -->
-  <section class="problem-section">
+  <!-- How It Works Section -->
+  <section class="how-section">
     <div class="container">
-      <h2 class="section-title">הבעיה לא שאתה לא טוב.</h2>
-      <h3 class="section-subtitle">הבעיה שהלידים מגיעים מכל מקום.</h3>
+      <h2 class="section-title">איך זה עובד</h2>
+      <p class="section-subtitle">3 צעדים פשוטים. בלי הגדרות מסובכות.</p>
 
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-          </div>
-          <h4>WhatsApp</h4>
-          <p>הודעה מחבר שהפנה מישהו. נקברה בין 50 הודעות אחרות.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>ליד נכנס</h3>
+          <p>מ-WhatsApp, טלפון, מייל או טופס באתר. מכל מקום.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <h4>שיחות שלא נענו</h4>
-          <p>היית בדיון. לא הספקת לרשום. שכחת לחזור.</p>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>תעד ב-5 שניות</h3>
+          <p>שתף, הקלט קולית, או צלם מסך. ה-AI עושה את השאר.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-          </div>
-          <h4>מיילים</h4>
-          <p>פנייה מהאתר. נכנסה בין 100 מיילים. נקראה אחרי שבוע.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="9" y1="9" x2="15" y2="15"></line>
-              <line x1="15" y1="9" x2="9" y2="15"></line>
-            </svg>
-          </div>
-          <h4>טפסים מהאתר</h4>
-          <p>נשלח למייל. נפתח יומיים אחרי. הלקוח כבר אצל מישהו אחר.</p>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>קבל תזכורת</h3>
+          <p>לא חזרת? האפליקציה מזכירה. אף ליד לא נשכח.</p>
         </div>
       </div>
-
-      <p class="problem-conclusion">ואין מקום אחד שאוסף את כולם.</p>
     </div>
   </section>
 
-  <!-- Solution Section -->
-  <section class="solution-section">
+  <!-- Problem Section -->
+  <section class="problem-section">
     <div class="container">
-      <div class="solution-header">
-        <h2 class="section-title light">אפליקציה אחת.<br>כל הלידים.</h2>
-        <p class="solution-intro">5 שניות לתעד ליד. מכל מקור שהוא.</p>
+      <h2 class="section-title light">הבעיה במספרים</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-big">73%</div>
+          <p>מהלידים אובדים בגלל מענה איטי</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-big">24 שעות</div>
+          <p>זמן התגובה הממוצע של עורכי דין</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-big">2-3</div>
+          <p>ערוצי תקשורת שונים לכל ליד</p>
+        </div>
       </div>
 
-      <div class="solution-methods">
-        <div class="method-card">
-          <div class="method-number">01</div>
-          <h4>שתף הודעה</h4>
-          <p>קיבלת WhatsApp או SMS? שתף לאפליקציה. ה-AI מנתח ושומר.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">02</div>
-          <h4>הקלט קולית</h4>
-          <p>באמצע דיון? פתח את האפליקציה, הקלט 5 שניות, סיימת.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">03</div>
-          <h4>צלם מסך</h4>
-          <p>צילום מסך של שיחה? האפליקציה קוראת ומתעדת.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">04</div>
-          <h4>העבר מייל</h4>
-          <p>קיבלת פנייה במייל? העבר לכתובת ייעודית. נכנס אוטומטית.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">05</div>
-          <h4>שיחה שלא נענתה</h4>
-          <p>לא הספקת לענות? האפליקציה מזהה ומזכירה לך לחזור.</p>
-        </div>
-      </div>
+      <p class="problem-conclusion">אין לך בעיה של לידים. יש לך בעיה של ארגון.</p>
     </div>
   </section>
 
   <!-- Features Section -->
   <section class="features-section">
     <div class="container">
-      <h2 class="section-title light">מה עוד מקבלים</h2>
+      <h2 class="section-title">מה מקבלים</h2>
 
       <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-line"></div>
-          <h4>ניתוח אוטומטי</h4>
-          <p>ה-AI מזהה שם, טלפון, נושא הפנייה - בלי שתקליד מילה.</p>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h4>שיתוף מ-WhatsApp</h4>
+          <p>קיבלת הודעה? שתף לאפליקציה. ה-AI מנתח ושומר.</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-line"></div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </div>
+          <h4>הקלטה קולית</h4>
+          <p>באמצע דיון? הקלט 5 שניות. ה-AI מתמלל ושומר.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+          </div>
+          <h4>צילום מסך</h4>
+          <p>צילום של שיחה? האפליקציה קוראת OCR ומתעדת.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h4>העברת מייל</h4>
+          <p>קיבלת פנייה? העבר לכתובת ייעודית. נכנס אוטומטית.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
           <h4>תזכורות חכמות</h4>
           <p>לא חזרת תוך 24 שעות? תקבל תזכורת. לא תוך 48? עוד אחת.</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-line"></div>
-          <h4>סטטוס ליד</h4>
-          <p>חדש, בטיפול, נסגר. תמיד תדע איפה כל ליד עומד.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-line"></div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
           <h4>דו"ח חודשי</h4>
           <p>כמה לידים נכנסו, כמה נסגרו, כמה אבדו. במספרים.</p>
         </div>
@@ -199,7 +262,7 @@
   <!-- Pricing Section -->
   <section class="pricing-section">
     <div class="container">
-      <h2 class="section-title">תמחור פשוט</h2>
+      <h2 class="section-title light">תמחור פשוט</h2>
       <p class="pricing-intro">בלי הפתעות. בלי חוזים. בטל מתי שתרצה.</p>
 
       <div class="pricing-cards">
@@ -243,7 +306,7 @@
   <!-- About Section -->
   <section class="about-section">
     <div class="container">
-      <h2 class="section-title light">מי מאחורי זה</h2>
+      <h2 class="section-title">מי מאחורי זה</h2>
 
       <div class="founders-grid">
         <div class="founder-card">

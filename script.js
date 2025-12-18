@@ -60,7 +60,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.problem-card, .method-card, .feature-item, .founder-card, .pricing-card').forEach(el => {
+document.querySelectorAll('.step-card, .stat-card, .feature-card, .founder-card, .pricing-card').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
