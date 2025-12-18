@@ -470,6 +470,55 @@ h1, h2, h3, h4 {
     transform: translateX(-4px);
 }
 
+/* Hero Text (New simplified version) */
+.hero-text {
+    text-align: center;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 4.2s;
+}
+
+.hero-small {
+    font-size: 18px;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.hero-headline {
+    font-size: clamp(36px, 7vw, 56px);
+    font-weight: 800;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+    color: var(--bg-primary);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 24px rgba(212, 168, 83, 0.25);
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(212, 168, 83, 0.35);
+}
+
 /* Hero Badges */
 .hero-badges {
     display: flex;
@@ -744,6 +793,70 @@ h1, h2, h3, h4 {
     line-height: 1.8;
 }
 
+/* Founders Grid (Who We Are section) */
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto 48px;
+}
+
+.founder-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.founder-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-light);
+    transform: translateY(-4px);
+}
+
+.founder-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.founder-desc {
+    font-size: 15px;
+    color: var(--text-tertiary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* About Story */
+.about-story {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.about-story p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-story p:last-child {
+    margin-bottom: 0;
+}
+
+.about-story strong {
+    color: var(--accent-gold);
+}
+
 .stats-row {
     display: flex;
     align-items: center;
@@ -971,6 +1084,19 @@ h1, h2, h3, h4 {
 .pricing-note {
     font-size: 15px;
     color: var(--text-tertiary);
+}
+
+.price-starting {
+    font-size: 16px;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+}
+
+.price-more {
+    font-size: 15px;
+    color: var(--text-tertiary);
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .pricing-features {
@@ -1265,6 +1391,10 @@ h1, h2, h3, h4 {
     .stats-row {
         justify-content: center;
     }
+
+    .founders-grid {
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1307,6 +1437,19 @@ h1, h2, h3, h4 {
 
     .scroll-indicator {
         display: none;
+    }
+
+    .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .founder-card {
+        padding: 28px;
+    }
+
+    .about-story {
+        padding: 28px;
     }
 
     .flow-container {
