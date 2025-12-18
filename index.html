@@ -1,438 +1,315 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="פתרונות קליטת לקוחות למשרדי עורכי דין - תומר ואלון">
-    <title>תומר ואלון | פתרונות קליטת לקוחות לעורכי דין</title>
-
-    <!-- Google Fonts - Inter + Heebo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoMiss | אף ליד לא נופל</title>
+  <meta name="description" content="אפליקציה לניהול לידים לעורכי דין. כל הלידים במקום אחד - מ-WhatsApp, טלפון, מייל ואתר.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Ambient Background -->
-    <div class="ambient-bg"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <!-- Phone Mockup -->
-            <div class="phone-wrapper">
-                <div class="phone-mockup">
-                    <div class="phone-notch">
-                        <div class="notch-camera"></div>
-                    </div>
-                    <div class="phone-screen">
-                        <div class="phone-status-bar">
-                            <span class="time">10:42</span>
-                            <div class="status-icons">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c-1.654 0-3-1.346-3-3h6c0 1.654-1.346 3-3 3zm6.364-4H5.636C4.733 17 4 16.267 4 15.364V15c0-.326.131-.641.364-.867.233-.227.555-.355.886-.356.662-.002 1.204-.287 1.518-.801.314-.513.397-1.148.232-1.782C6.467 9.198 6 7.137 6 6c0-3.309 2.691-6 6-6s6 2.691 6 6c0 1.137-.467 3.198-1 5.194-.165.634-.082 1.269.232 1.782.314.514.856.799 1.518.801.331.001.653.129.886.356.233.226.364.541.364.867v.364C20 16.267 19.267 17 18.364 17z"/></svg>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
-                                <span class="battery">78%</span>
-                            </div>
-                        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <nav class="nav">
+      <div class="logo">NoMiss</div>
+      <a href="#waitlist" class="nav-cta">הצטרפות מוקדמת</a>
+    </nav>
 
-                        <div class="messages-header">
-                            <div class="header-back">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-                            </div>
-                            <div class="header-avatar">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                            </div>
-                            <div class="header-info">
-                                <span class="header-name">לקוחות פוטנציאליים</span>
-                                <span class="header-status">3 הודעות לא נקראו</span>
-                            </div>
-                        </div>
-
-                        <div class="messages-container">
-                            <div class="message-group">
-                                <div class="message incoming">
-                                    <div class="message-bubble">
-                                        <p>היי, פניתי דרך האתר לפני שבוע. עדיין לא קיבלתי תשובה?</p>
-                                        <span class="message-time">לפני 5 ימים</span>
-                                    </div>
-                                </div>
-
-                                <div class="message incoming">
-                                    <div class="message-bubble">
-                                        <p>שלום, ניסיתי להתקשר כמה פעמים. אני ממש צריך עזרה...</p>
-                                        <span class="message-time">לפני 3 ימים</span>
-                                    </div>
-                                </div>
-
-                                <div class="message incoming final">
-                                    <div class="message-bubble">
-                                        <p>סגרתי עם עורך דין אחר. חבל, שמעתי עליך דברים טובים.</p>
-                                        <span class="message-time">היום, 09:15</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="read-indicator">
-                                <div class="typing-dots">
-                                    <span></span><span></span><span></span>
-                                </div>
-                                <span>נקרא עכשיו</span>
-                            </div>
-                        </div>
-                    </div>
+    <div class="hero-content">
+      <div class="hero-phone">
+        <!-- Phone Mockup -->
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="phone-time">10:42</span>
+              <span class="phone-status">
+                <span class="status-signal"></span>
+                <span class="status-battery">78%</span>
+              </span>
+            </div>
+            <div class="messages-container">
+              <div class="messages-title">
+                <span class="messages-label">לקוחות פוטנציאליים</span>
+                <span class="messages-badge">3 שלא נענו</span>
+              </div>
+              <div class="message-card">
+                <div class="message-header">
+                  <span class="message-sender">לקוח חדש</span>
+                  <span class="message-time">לפני 5 ימים</span>
                 </div>
-                <div class="phone-glow"></div>
-                <div class="phone-reflection"></div>
+                <p class="message-text">היי, פניתי דרך האתר בנוגע לתיק ירושה. עדיין לא קיבלתי תשובה?</p>
+              </div>
+              <div class="message-card">
+                <div class="message-header">
+                  <span class="message-sender">לקוח חדש</span>
+                  <span class="message-time">לפני 3 ימים</span>
+                </div>
+                <p class="message-text">שלום, ניסיתי להתקשר כמה פעמים. אני ממש צריך עזרה עם זה...</p>
+              </div>
+              <div class="message-card final">
+                <div class="message-header">
+                  <span class="message-sender">לקוח חדש</span>
+                  <span class="message-time">היום, 09:15</span>
+                </div>
+                <p class="message-text">סגרתי עם עורך דין אחר. חבל, שמעתי עליך דברים טובים.</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Hero Text -->
-            <div class="hero-text">
-                <p class="hero-small">זה לא הטלפון שלך.</p>
-                <h1 class="hero-headline">אבל זה יכול להיות.</h1>
-                <a href="#contact" class="cta-button">רוצה שזה ייפסק?</a>
-            </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow">זה לא הטלפון שלך.</p>
+        <h1 class="hero-headline">אבל זה יכול להיות.</h1>
+        <p class="hero-sub">לידים נכנסים מ-WhatsApp, טלפון, מייל, ואתר.<br>אין סיכוי לזכור את כולם. עד עכשיו.</p>
+        <a href="#waitlist" class="hero-cta">גלה איך זה עובד</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problem-section">
+    <div class="container">
+      <h2 class="section-title">הבעיה לא שאתה לא טוב.</h2>
+      <h3 class="section-subtitle">הבעיה שהלידים מגיעים מכל מקום.</h3>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h4>WhatsApp</h4>
+          <p>הודעה מחבר שהפנה מישהו. נקברה בין 50 הודעות אחרות.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h4>שיחות שלא נענו</h4>
+          <p>היית בדיון. לא הספקת לרשום. שכחת לחזור.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h4>מיילים</h4>
+          <p>פנייה מהאתר. נכנסה בין 100 מיילים. נקראה אחרי שבוע.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+            </svg>
+          </div>
+          <h4>טפסים מהאתר</h4>
+          <p>נשלח למייל. נפתח יומיים אחרי. הלקוח כבר אצל מישהו אחר.</p>
+        </div>
+      </div>
+
+      <p class="problem-conclusion">ואין מקום אחד שאוסף את כולם.</p>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution-section">
+    <div class="container">
+      <div class="solution-header">
+        <h2 class="section-title light">אפליקציה אחת.<br>כל הלידים.</h2>
+        <p class="solution-intro">5 שניות לתעד ליד. מכל מקור שהוא.</p>
+      </div>
+
+      <div class="solution-methods">
+        <div class="method-card">
+          <div class="method-number">01</div>
+          <h4>שתף הודעה</h4>
+          <p>קיבלת WhatsApp או SMS? שתף לאפליקציה. ה-AI מנתח ושומר.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">02</div>
+          <h4>הקלט קולית</h4>
+          <p>באמצע דיון? פתח את האפליקציה, הקלט 5 שניות, סיימת.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">03</div>
+          <h4>צלם מסך</h4>
+          <p>צילום מסך של שיחה? האפליקציה קוראת ומתעדת.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">04</div>
+          <h4>העבר מייל</h4>
+          <p>קיבלת פנייה במייל? העבר לכתובת ייעודית. נכנס אוטומטית.</p>
+        </div>
+        <div class="method-card">
+          <div class="method-number">05</div>
+          <h4>שיחה שלא נענתה</h4>
+          <p>לא הספקת לענות? האפליקציה מזהה ומזכירה לך לחזור.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title light">מה עוד מקבלים</h2>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-line"></div>
+          <h4>ניתוח אוטומטי</h4>
+          <p>ה-AI מזהה שם, טלפון, נושא הפנייה - בלי שתקליד מילה.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-line"></div>
+          <h4>תזכורות חכמות</h4>
+          <p>לא חזרת תוך 24 שעות? תקבל תזכורת. לא תוך 48? עוד אחת.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-line"></div>
+          <h4>סטטוס ליד</h4>
+          <p>חדש, בטיפול, נסגר. תמיד תדע איפה כל ליד עומד.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-line"></div>
+          <h4>דו"ח חודשי</h4>
+          <p>כמה לידים נכנסו, כמה נסגרו, כמה אבדו. במספרים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">תמחור פשוט</h2>
+      <p class="pricing-intro">בלי הפתעות. בלי חוזים. בטל מתי שתרצה.</p>
+
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-name">בסיסי</div>
+          <div class="pricing-price">
+            <span class="price-number">49</span>
+            <span class="price-currency">₪</span>
+            <span class="price-period">/חודש</span>
+          </div>
+          <ul class="pricing-features">
+            <li>עד 30 לידים בחודש</li>
+            <li>כל דרכי הקלט</li>
+            <li>תזכורות אוטומטיות</li>
+            <li>דו"ח חודשי</li>
+          </ul>
         </div>
 
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">הכי פופולרי</div>
+          <div class="pricing-name">פרו</div>
+          <div class="pricing-price">
+            <span class="price-number">99</span>
+            <span class="price-currency">₪</span>
+            <span class="price-period">/חודש</span>
+          </div>
+          <ul class="pricing-features">
+            <li>לידים ללא הגבלה</li>
+            <li>כל דרכי הקלט</li>
+            <li>תזכורות אוטומטיות</li>
+            <li>דו"ח חודשי מפורט</li>
+            <li>תמיכה מועדפת</li>
+          </ul>
         </div>
-    </section>
+      </div>
 
-    <!-- Pain Section -->
-    <section class="pain-section" id="pain">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">המציאות</span>
-                <h2 class="section-title">זה קרה גם השבוע.</h2>
-                <p class="section-subtitle">כל עורך דין מכיר את הרגעים האלה</p>
-            </div>
+      <p class="pricing-trial">חודש ראשון חינם. בלי כרטיס אשראי.</p>
+    </div>
+  </section>
 
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            <path d="M14.05 2a9 9 0 0 1 8 7.94" stroke-linecap="round"/>
-                            <path d="M14.05 6A5 5 0 0 1 18 10" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3>הודעה קולית מלפני שבוע</h3>
-                        <p>עדיין לא האזנת. עדיין לא חזרת.<br><span class="highlight">הלקוח כבר לא מחכה.</span></p>
-                    </div>
-                    <div class="card-number">01</div>
-                </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title light">מי מאחורי זה</h2>
 
-                <div class="pain-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10 9 9 9 8 9"/>
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3>פתק צהוב על השולחן</h3>
-                        <p>"להתקשר לרונית - דחוף"<br><span class="highlight">אתה לא זוכר מי זו רונית.</span></p>
-                    </div>
-                    <div class="card-number">02</div>
-                </div>
-
-                <div class="pain-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3>3:47 בלילה</h3>
-                        <p>"רגע, מה עם התיק של אבירם?"<br><span class="highlight">לא נרדמת עד 5.</span></p>
-                    </div>
-                    <div class="card-number">03</div>
-                </div>
-            </div>
+      <div class="founders-grid">
+        <div class="founder-card">
+          <div class="founder-initial">ת</div>
+          <h3>תומר מייסון</h3>
+          <p class="founder-title">שותף מייסד</p>
+          <p class="founder-bio">+12 שנות ניסיון בניהול תפעול בינלאומי. עבד בישראל, ארה"ב, אנגליה ודרום אפריקה. יודע מה זה לאבד עסקה על תזמון.</p>
         </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag light">הפתרון</span>
-                <h2 class="section-title light">מה אם זה היה עובד אחרת?</h2>
-            </div>
-
-            <div class="flow-container">
-                <div class="flow-item">
-                    <div class="flow-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                    </div>
-                    <span class="flow-label">ליד נכנס</span>
-                </div>
-
-                <div class="flow-connector">
-                    <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12h35M30 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                </div>
-
-                <div class="flow-item">
-                    <div class="flow-icon accent">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                        </svg>
-                    </div>
-                    <span class="flow-label">נקלט אוטומטית</span>
-                </div>
-
-                <div class="flow-connector">
-                    <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12h35M30 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                </div>
-
-                <div class="flow-item">
-                    <div class="flow-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                        </svg>
-                    </div>
-                    <span class="flow-label">אתה מקבל התראה</span>
-                </div>
-
-                <div class="flow-connector">
-                    <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12h35M30 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                </div>
-
-                <div class="flow-item">
-                    <div class="flow-icon success">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
-                    <span class="flow-label">הלקוח מקבל אישור</span>
-                </div>
-            </div>
-
-            <div class="solution-highlight">
-                <div class="highlight-content">
-                    <span class="highlight-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </span>
-                    <p>בלי שתעשה כלום. בלי שתצטרך לזכור. <strong>בלי עוד לקוח שנפל בין הכיסאות.</strong></p>
-                </div>
-            </div>
+        <div class="founder-card">
+          <div class="founder-initial">א</div>
+          <h3>אלון גרבר</h3>
+          <p class="founder-title">שותף מייסד</p>
+          <p class="founder-bio">+14 שנות ניסיון בבניית מערכות ואוטומציה. בנה כלים שחסכו מאות אלפי שקלים בשנה. מתמחה בלהפוך בלאגן לסדר.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section - Who We Are -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">הצוות</span>
-                <h2 class="section-title">מי אנחנו</h2>
-            </div>
+      <div class="about-story">
+        <p>התחלנו את NoMiss כשראינו חברים עורכי דין מפסידים לקוחות על שטויות. לא כי הם לא טובים - כי אין להם כלי שאוסף הכל למקום אחד. בנינו את מה שהם היו צריכים.</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <h3 class="founder-name">תומר מייסון</h3>
-                    <p class="founder-role">שותף מייסד</p>
-                    <p class="founder-desc">+12 שנות ניסיון בניהול תפעול ולוגיסטיקה בינלאומית. עבד בישראל, ארה"ב, אנגליה ודרום אפריקה. מומחה בניהול תהליכים מורכבים ותיאום מול גורמים מרובים.</p>
-                </div>
+  <!-- Waitlist Section -->
+  <section class="waitlist-section" id="waitlist">
+    <div class="container">
+      <div class="waitlist-content">
+        <h2 class="section-title light">האפליקציה בפיתוח.</h2>
+        <p class="waitlist-sub">הצטרף לרשימת ההמתנה וקבל גישה ראשונה + 3 חודשים חינם.</p>
 
-                <div class="founder-card">
-                    <h3 class="founder-name">אלון גרבר</h3>
-                    <p class="founder-role">שותף מייסד</p>
-                    <p class="founder-desc">+14 שנות ניסיון בבניית מערכות תפעול ואוטומציה. בנה כלים שחסכו מאות אלפי שקלים בשנה. מתמחה בלקחת תהליכים ידניים ולהפוך אותם לאוטומטיים.</p>
-                </div>
-            </div>
+        <form class="waitlist-form" id="waitlist-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="שם מלא" required>
+            <input type="tel" name="phone" placeholder="טלפון" required>
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="אימייל" required>
+          </div>
+          <button type="submit" class="submit-btn">שריין את המקום שלי</button>
+        </form>
 
-            <div class="about-story">
-                <p>התחלנו לבנות את זה כשחבר עו"ד סיפר לנו שהוא מאבד לפחות 2-3 לקוחות בחודש - לא כי הוא לא טוב, אלא כי פשוט לא הספיק לחזור אליהם בזמן.</p>
-                <p>בנינו לו משהו פשוט שעובד. <strong>עכשיו אנחנו מציעים את זה גם לך.</strong></p>
-            </div>
+        <p class="waitlist-count">
+          <span class="count-number">47</span> עורכי דין כבר ברשימה
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">NoMiss</div>
+          <p>אף ליד לא נופל.</p>
         </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section" id="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">התהליך</span>
-                <h2 class="section-title">איך זה עובד?</h2>
-                <p class="section-subtitle">שלושה צעדים פשוטים לשקט נפשי</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span>1</span>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>שיחה קצרה</h3>
-                        <p>20 דקות בזום. אנחנו מבינים מה קורה אצלך, מה כואב, ומה צריך לפתור.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span>2</span>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>אנחנו בונים</h3>
-                        <p>בין שבוע לשבועיים - מערכת מותאמת בדיוק לצרכים שלך. לא תבנית גנרית.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker success">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    </div>
-                    <div class="timeline-card">
-                        <h3>שקט בראש</h3>
-                        <p>המערכת עובדת. הלקוחות מטופלים. אתה יכול להתמקד במה שחשוב.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-contact">
+          <a href="tel:+972524771113">052-4771113</a>
+          <a href="mailto:alongerber@gmail.com">alongerber@gmail.com</a>
         </div>
-    </section>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NoMiss. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag light">השקעה</span>
-                <h2 class="section-title light">כמה זה עולה?</h2>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <p class="price-starting">החל מ-</p>
-                    <div class="pricing-amount">
-                        <span class="price">1,500</span>
-                        <span class="currency">ש"ח</span>
-                    </div>
-                    <p class="pricing-note">תשלום חד-פעמי · בלי מנויים · בלי הפתעות</p>
-                </div>
-
-                <div class="pricing-features">
-                    <div class="pricing-feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <span>טופס מקצועי לאתר שלך</span>
-                    </div>
-                    <div class="pricing-feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <span>התראה מיידית על כל פנייה</span>
-                    </div>
-                    <div class="pricing-feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <span>מייל אוטומטי ללקוח</span>
-                    </div>
-                    <div class="pricing-feature">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <span>תיעוד של כל הפניות</span>
-                    </div>
-                </div>
-
-                <p class="price-more">צריך יותר? יש חבילות מורחבות. נדבר.</p>
-
-                <a href="#contact" class="btn-primary full-width">
-                    <span>בוא נדבר על מה מתאים לך</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-content">
-                    <span class="section-tag">צור קשר</span>
-                    <h2 class="section-title align-right">בוא נדבר.</h2>
-                    <p class="contact-text">השאר פרטים ונחזור אליך תוך 24 שעות. בלי ספאם, בלי לחץ.</p>
-
-                    <div class="contact-promise">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-                        <span>הפרטים שלך מאובטחים ולא יועברו לאף גורם חיצוני</span>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="שם מלא" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="טלפון" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="אימייל">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="במשפט אחד - מה הכי מתסכל אותך היום?" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">רוצה לשמוע</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-name">תומר ואלון</span>
-                    <span class="footer-tagline">פתרונות קליטת לקוחות למשרדי עורכי דין</span>
-                </div>
-                <div class="footer-links">
-                    <a href="tel:+972524771113">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-                        <span>052-4771113</span>
-                    </a>
-                    <a href="mailto:alongerber@gmail.com">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        <span>alongerber@gmail.com</span>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 כל הזכויות שמורות</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Call Button (Mobile) -->
-    <a href="tel:+972524771113" class="floating-call">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-        <span>התקשרו עכשיו</span>
-    </a>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

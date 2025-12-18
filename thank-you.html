@@ -1,115 +1,27 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תודה! | תומר ואלון</title>
-
-    <!-- Google Fonts - Heebo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Heebo', sans-serif;
-            direction: rtl;
-        }
-
-        .thank-you-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #1E3A5F 0%, #0F172A 100%);
-            padding: 20px;
-        }
-
-        .thank-you-content {
-            text-align: center;
-            color: #fff;
-        }
-
-        .thank-you-icon {
-            width: 80px;
-            height: 80px;
-            background: #10B981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            margin: 0 auto 24px;
-            color: #fff;
-        }
-
-        .thank-you-content h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
-        .thank-you-main {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .thank-you-sub {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 18px;
-            margin-bottom: 24px;
-        }
-
-        .thank-you-names {
-            color: #D4A853;
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 32px;
-        }
-
-        .back-link {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .back-link:hover {
-            color: #fff;
-        }
-
-        @media (max-width: 480px) {
-            .thank-you-content h1 {
-                font-size: 36px;
-            }
-        }
-    </style>
-
-    <!-- Meta Pixel - Lead Conversion -->
-    <script>
-        // Track conversion when page loads (user successfully submitted form)
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'Lead');
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>תודה! | NoMiss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="thank-you-page">
-        <div class="thank-you-content">
-            <div class="thank-you-icon">✓</div>
-            <h1>תודה!</h1>
-            <p class="thank-you-main">קיבלנו את הפרטים שלך.</p>
-            <p class="thank-you-sub">נחזור אליך תוך 24 שעות.</p>
-            <p class="thank-you-names">תומר ואלון</p>
-            <a href="index.html" class="back-link">← חזרה לדף הראשי</a>
-        </div>
+  <div class="thank-you-page">
+    <div class="thank-you-content">
+      <div class="thank-you-check">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h1>אתה ברשימה.</h1>
+      <p class="thank-you-main">נעדכן אותך ברגע שהאפליקציה מוכנה.</p>
+      <p class="thank-you-bonus">+ 3 חודשים חינם מחכים לך.</p>
+      <a href="index.html" class="back-link">חזרה לדף הראשי</a>
     </div>
+  </div>
 </body>
 </html>
